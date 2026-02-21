@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA | PANITTHA </title>
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/1/15/Wny-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Wny-logo.png" alt="WNY Logo" style="height: 45px; width: auto; filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.3));">
+                <div style="line-height: 1.2;">
+                    PA <span style="color: var(--primary);">PANITTHA</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">หน้าแรก</a></li>
+                <li><a href="profile.html">ข้อมูลทั่วไป</a></li>
+                <li><a href="workload.html">ภาระงาน</a></li>
+                <li class="dropdown">
+                    <a href="#">ข้อตกลง PA ▾</a>
+                    <div class="dropdown-content">
+                        <a href="part1.html">องค์ประกอบที่ 1 (การจัดการเรียนรู้)</a>
+                        <a href="part2.html">องค์ประกอบที่ 2 (การส่งเสริมฯ)</a>
+                        <a href="part3.html">องค์ประกอบที่ 3 (การพัฒนาตนเอง)</a>
+                    </div>
+                </li>
+                <li><a href="activities.html">ภาพกิจกรรม</a></li>
+                <li><a href="awards.html">เกียรติบัตร</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container hero">
+        <div class="banner-container">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="banner-img" alt="School Banner">
+        </div>
+        
+        <div class="profile-header-card">
+            <div class="profile-img-container">
+                <img src="https://via.placeholder.com/300x300?text=Profile+Image" alt="ครูปณิฏฐา บุญยงค์">
+            </div>
+            <div class="profile-text">
+                <h1 style="font-size: 2.2rem;">นางสาวปณิฏฐา บุญยงค์</h1>
+                <p style="color: var(--primary-light); font-size: 1.1rem; margin-bottom: 10px;">ตำแหน่ง ครู | วิทยฐานะ -</p>
+                <p>โรงเรียนวังน้ำเย็นวิทยาคม</p>
+                <p>สพม. สระแก้ว</p>
+                <div style="margin-top: 15px;">
+                    <span style="background: rgba(16, 185, 129, 0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; border: 1px solid var(--primary);">PA 2569</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <h2 class="section-title">องค์ประกอบในการพัฒนางาน</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            <div class="card">
+                <h3>ด้านที่ 1</h3>
+                <p>การจัดการเรียนรู้</p>
+                <div style="margin: 20px 0; height: 6px; background: #334155; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 85%; height: 100%; background: var(--primary);"></div>
+                </div>
+                <a href="part1.html" class="btn">รายละเอียด</a>
+            </div>
+            <div class="card">
+                <h3>ด้านที่ 2</h3>
+                <p>การส่งเสริมและสนับสนุน</p>
+                <div style="margin: 20px 0; height: 6px; background: #334155; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 90%; height: 100%; background: var(--primary);"></div>
+                </div>
+                <a href="part2.html" class="btn">รายละเอียด</a>
+            </div>
+            <div class="card">
+                <h3>ด้านที่ 3</h3>
+                <p>การพัฒนาตนเองและวิชาชีพ</p>
+                <div style="margin: 20px 0; height: 6px; background: #334155; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 80%; height: 100%; background: var(--primary);"></div>
+                </div>
+                <a href="part3.html" class="btn">รายละเอียด</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 PANIITTHA BOONYONG | PA PERFORMANCE AGREEMENT</p>
+            <p class="sub-footer" style="font-size: 0.65rem; margin-top: 8px; opacity: 0.8; letter-spacing: 0.5px;">WANGNAMYENWITTAYAKOM SCHOOL • SECONDARY EDUCATIONAL SERVICE AREA OFFICE SA KAEO</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* PA EXPERT SYSTEM - FULL STYLESHEET */
+:root {
+    --primary: #10b981;
+    --primary-light: #34d399;
+    --dark-bg: #0a0f18;
+    --card-bg: rgba(31, 41, 55, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f3f4f6;
+    --text-dim: #9ca3af;
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(52, 211, 153, 0.05) 0%, transparent 40%);
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 15, 24, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    padding: 0.8rem 0; /* ปรับลด padding เล็กน้อยเพื่อให้สมดุลกับโลโก้ */
+}
+
+.nav-wrapper { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    letter-spacing: 1.5px; 
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* ระยะห่างระหว่างโลโก้รูปภาพกับข้อความ */
+}
+
+.logo span { 
+    color: var(--primary); 
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3); 
+}
+
+.logo img {
+    height: 45px; /* ขนาดความสูงโลโก้โรงเรียน */
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+.nav-menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 5px; 
+}
+
+.nav-menu a {
+    color: var(--text-main); 
+    text-decoration: none; 
+    font-size: 0.9rem;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active { 
+    color: var(--primary-light); 
+    background: rgba(16, 185, 129, 0.1); 
+}
+
+/* Dropdown */
+.dropdown { 
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background: #111827; 
+    min-width: 260px; 
+    border-radius: 12px;
+    border: 1px solid var(--glass-border); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content { 
+    display: block; 
+    animation: slideUp 0.3s ease; 
+}
+
+.dropdown-content a { 
+    display: block; 
+    padding: 10px 20px; 
+}
+
+@keyframes slideUp { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Hero Section */
+.hero { 
+    padding: 80px 0; 
+    text-align: center; 
+}
+
+.banner-container {
+    width: 100%; 
+    height: 350px; 
+    border-radius: 30px;
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+    margin-bottom: -150px; 
+    overflow: hidden; 
+    position: relative;
+    border: 1px solid var(--glass-border);
+}
+
+.banner-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.6; 
+}
+
+.profile-header-card {
+    background: var(--card-bg); 
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border); 
+    border-radius: 24px;
+    padding: 40px; 
+    display: flex; 
+    align-items: center; 
+    gap: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    max-width: 900px; 
+    margin: 0 auto; 
+    position: relative;
+    text-align: left;
+}
+
+.profile-img-container {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 20px;
+    border: 3px solid var(--primary); 
+    overflow: hidden; 
+    flex-shrink: 0;
+}
+
+.profile-img-container img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.section-title { 
+    font-size: 2rem; 
+    margin-bottom: 30px; 
+    position: relative; 
+    padding-left: 20px; 
+}
+
+.section-title::before {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 15%;
+    width: 5px; 
+    height: 70%; 
+    background: var(--primary); 
+    border-radius: 10px;
+}
+
+/* Common Card Style */
+.card {
+    background: var(--card-bg); 
+    border: 1px solid var(--glass-border);
+    border-radius: 20px; 
+    padding: 30px; 
+    transition: 0.4s ease; 
+    height: 100%;
+}
+
+.card:hover { 
+    border-color: var(--primary); 
+    transform: translateY(-8px); 
+}
+
+/* Table Style */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    padding: 15px; 
+    text-align: left; 
+    border-bottom: 1px solid var(--glass-border); 
+}
+
+th { 
+    color: var(--primary-light); 
+    font-weight: 600; 
+}
+
+/* Buttons */
+.btn {
+    display: inline-block; 
+    padding: 10px 25px; 
+    background: var(--primary);
+    color: white; 
+    text-decoration: none; 
+    border-radius: 10px;
+    font-weight: 600; 
+    transition: 0.3s; 
+    border: none; 
+    cursor: pointer;
+}
+
+.btn:hover { 
+    background: var(--primary-light); 
+    transform: scale(1.05); 
+}
+
+/* Footer - ปรับปรุงขนาดใหม่ให้ดู Professional ตามคำขอ */
+footer { 
+    padding: 40px 0; 
+    text-align: center; 
+    border-top: 1px solid var(--glass-border); 
+    margin-top: 80px; 
+    opacity: 0.6; /* ปรับความโปร่งแสงเพื่อให้ดูเป็นส่วนเสริม */
+}
+
+footer p {
+    font-size: 0.75rem; /* ขนาดฟอนต์เล็กลง */
+    letter-spacing: 0.8px; 
+    font-weight: 300; 
+    color: var(--text-dim);
+    text-transform: uppercase; 
+}
+
+footer .sub-footer {
+    font-size: 0.65rem; /* ขนาดฟอนต์รองเล็กลงอีกระดับ */
+    margin-top: 8px;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+}
